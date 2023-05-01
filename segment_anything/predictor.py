@@ -28,7 +28,7 @@ class SamPredictor:
         """
         super().__init__()
         self.model = sam_model
-        self.transform = ResizeLongestSide(sam_model.module.image_encoder.img_size)
+        self.transform = ResizeLongestSide(sam_model.image_encoder.img_size)
         self.reset_image()
 
     def set_image(
